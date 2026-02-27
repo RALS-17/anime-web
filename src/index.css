@@ -1,0 +1,38 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    @apply font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-roboto font-bold;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(249, 250, 251);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF5E7D, #7860FF);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #E04C68, #6550DB);
+}
+
+dark ::-webkit-scrollbar-track {
+  background: rgb(31, 41, 55);
+}
