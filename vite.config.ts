@@ -9,4 +9,16 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendors': ['react', 'react-dom'],
+        },
+      },
+    },
+  },
 })
